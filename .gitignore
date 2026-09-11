@@ -1,0 +1,26 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+
+# 生成的输出（SVG / JSON / GIF）
+output/
+output-n1000-backup/
+*.svg
+*.gif
+
+# 个人照片（不上传；示例图请放 samples/）
+input-images/
+
+# 旧版命令行脚本（已被 GUI 取代）
+/capture.js
+/draw.js
+/get-image-json.py
+/index.html
+/CHECKPOINT.md
+/readme/
+
+# 系统
+.DS_Store
+Thumbs.db

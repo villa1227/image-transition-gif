@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>图片过渡 GIF 生成器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>图片过渡 GIF 生成器</h1>
+    <p class="sub">导入两张图，一键生成过渡动画并保存为 GIF</p>
+  </header>
+
+  <main>
+    <section class="imgs">
+      <div class="img-slot">
+        <div class="thumb" id="thumb-a">图 1</div>
+        <button id="pick-a">选择图 1</button>
+        <div class="fname" id="name-a"></div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="img-slot">
+        <div class="thumb" id="thumb-b">图 2</div>
+        <button id="pick-b">选择图 2</button>
+        <div class="fname" id="name-b"></div>
+      </div>
+    </section>
+
+    <section class="options">
+      <div class="field">
+        <span class="label">过渡方向</span>
+        <label><input type="radio" name="direction" value="aba" checked> A→B→A 往返</label>
+        <label><input type="radio" name="direction" value="ab"> A→B 单向</label>
+      </div>
+      <details class="advanced">
+        <summary>高级设置</summary>
+        <div class="field">
+          <span class="label">帧率</span>
+          <select id="fps">
+            <option value="8">8（往返默认）</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="15">15（单向默认）</option>
+          </select>
+          <span class="hint">帧率越高越顺、文件越大；5MB 上限下往返建议 8</span>
+        </div>
+      </details>
+    </section>
+
+    <section class="actions">
+      <button id="generate" disabled>生成</button>
+      <button id="save" disabled>保存 GIF</button>
+    </section>
+
+    <div class="progress-wrap" id="progress-wrap" hidden>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="progress-text" id="progress-text"></div>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <section class="preview" id="preview-wrap" hidden>
+      <img id="preview" alt="预览">
+      <div class="meta" id="meta"></div>
+    </section>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

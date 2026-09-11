@@ -1,0 +1,57 @@
+{
+  "name": "d3-image-transitions-master",
+  "version": "1.0.0",
+  "description": "[D3.js](https://d3js.org/) does magic with svgs, and [Primitive](https://github.com/fogleman/primitive) transforms images into svgs. Put them together and you can turn Kevin Bacon into Francis Bacon:",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@skyra/gifenc": "^1.0.1"
+  },
+  "devDependencies": {
+    "canvas": "^3.2.3",
+    "electron": "^33.0.0",
+    "electron-builder": "^26.15.3",
+    "puppeteer": "^25.10.0"
+  },
+  "build": {
+    "appId": "com.example.imgtransition",
+    "productName": "ImageTransition",
+    "directories": {
+      "output": "dist"
+    },
+    "electronDist": "node_modules/electron/dist",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "lib/**/*",
+      "package.json",
+      "node_modules/@skyra/gifenc/**/*",
+      "node_modules/tslib/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "bin/primitive.exe",
+        "to": "primitive/primitive.exe"
+      }
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "npmRebuild": false
+  },
+  "allowScripts": {
+    "puppeteer@25.10.0": true,
+    "canvas@3.2.3": true
+  }
+}
