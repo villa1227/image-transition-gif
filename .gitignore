@@ -7,8 +7,9 @@ dist/
 # 生成的输出（SVG / JSON / GIF）
 output/
 output-n1000-backup/
-*.svg
-*.gif
+/output*.gif
+/ysh.gif
+/outputnailong1.svg
 
 # 个人照片（不上传；示例图请放 samples/）
 input-images/

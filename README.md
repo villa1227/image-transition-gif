@@ -6,6 +6,12 @@
 - 内置 [Primitive](https://github.com/fogleman/primitive) 形状生成 + 逐帧渲染
 - 可选 A→B→A 往返 / A→B 单向过渡
 
+## 效果演示
+
+牛顿 → 爱因斯坦（A→B→A 往返过渡）：
+
+![牛顿到爱因斯坦的过渡动画](samples/demo.gif)
+
 ## 快速开始
 
 ### 方式一：直接运行打包好的 exe
